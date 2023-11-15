@@ -17,11 +17,346 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+ /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb));*/
+}
+.nav{
+  @apply
+  grid
+  grid-cols-2
+  justify-center
+  items-center
+  justify-items-center
+  h-24
+}
+.nav-list{
+  @apply
+  grid
+  grid-cols-4
+  gap-8
+  items-center
+}
+.hero{
+  @apply
+  max-w-full
+  h-[31.25rem]
+  mb-[-50px]
+  bg-[url('./images/hero.jpg')]
+  bg-no-repeat
+  bg-cover
+  bg-center
+  py-[10.78rem]
+}
+.hero-head{
+  @apply
+  text-4xl
+  font-bold
+  text-center
+  m-auto
+  text-white
+  max-w-md
+}
+.hero-body{
+  @apply
+  text-white
+  text-center
+  text-base
+  font-normal
+  max-w-lg
+  m-auto
+}
+.inputs{
+  @apply
+  max-w-5xl
+  h-28
+  m-auto
+  relative
+  bg-[#fff]
+  shadow-xl
+  rounded
+  md:flex
+  place-content-around
+  items-center
+  hidden
+  mb-16
+}
+.input-box{
+  @apply
+  w-36
+  h-14
+  bg-[#EAEAEA]
+  outline-none
+  rounded
+  text-black
+  px-5
+}
+.input-box-long{
+  @apply
+  w-64
+  h-14
+  bg-[#EAEAEA]
+  outline-none
+  rounded
+  text-black
+  px-5
+}
+.find-butt{
+  @apply
+  w-56
+  h-14
+  text-white
+  bg-[#233D2C]
+  rounded
+  text-base
+}
+.cabins{
+  @apply
+  max-w-5xl
+  m-auto
+  h-fit
+}
+.head{
+  @apply
+  text-3xl
+  font-bold
+}
+.body-grid{
+  @apply
+  max-w-full
+  flex
+  place-content-between
+  mt-10
+  mb-10
+}
+.body-text{
+  @apply
+  max-w-3xl
+  text-[#47475f]
+  text-base
+}
+.body-link{
+  @apply
+  text-[#aaaaaa]
+  font-medium
+  underline
+  cursor-pointer
+}
+.card-grid{
+  @apply
+  flex
+  place-content-around
+  max-w-full
+  m-auto
+  mb-14
+  gap-3
+}
+.card{
+  @apply
+  max-w-xs
+  bg-[#2B3030]
+  rounded
+  text-white
+}
+.location{
+  @apply
+  text-[#D7FFF1]
+  font-medium
+  leading-6
+  text-xs
+}
+.card-body{
+  @apply
+  max-w-full
+  py-3
+  px-4
+}
+.card-head{
+  @apply
+  max-w-full
+  flex
+  place-content-between
+  mb-5
+}
+.head-content{
+  @apply
+  font-bold
+  text-xl
+  leading-6
+  text-white
+}
+.card-body-text{
+  @apply
+  text-sm
+  leading-6
+  mb-6
+}
+.review-grid{
+  @apply
+  flex
+  place-content-between
+}
+.reviews{
+  @apply
+  text-sm
+  font-light
+}
+.getaway-section{
+  @apply
+  max-w-full
+  bg-[#F2FAF9]
+  m-auto
+  py-14
+}
+.getaway{
+  @apply
+  max-w-5xl
+  m-auto
+}
+.getaway-card{
+  @apply
+  max-w-xs
+  bg-[#596363]
+  rounded
+  text-white
+}
+.getaway-card-grid{
+  @apply
+  flex
+  place-content-around
+  max-w-5xl
+  m-auto
+  mb-14
+  gap-3
+}
+.experience{
+  @apply
+  max-w-full
+  bg-[url('./images/purple.png')]
+  h-fit
+  py-36
+  px-40
+  h-[663px]
+  bg-no-repeat
+  bg-center
+  bg-cover
+}
+.experience-head{
+  @apply
+  text-4xl
+  font-bold
+  text-left
+  text-white
+  max-w-md
+  mb-5
+}
+.experience-body{
+  @apply
+  text-white
+  text-left
+  text-base
+  font-normal
+  max-w-lg
+  mb-12
+}
+.star-grid{
+  @apply
+  flex
+  max-w-[13rem]
+  place-content-between
+}
+.date{
+  @apply
+  text-sm
+  text-white
+  max-w-[6.8rem]
+}
+.stars{
+  @apply
+  max-h-[1.3rem]
+}
+.unwind{
+  @apply
+  max-w-5xl
+  m-auto
+  flex
+  my-20
+  place-content-between
+}
+.unwind-head{
+  @apply
+  max-w-[20rem]
+  text-3xl
+  font-bold
+}
+.unwind-body-text{
+  @apply
+  max-w-[24rem]
+  text-[#47475f]
+  text-base
+}
+.available-section{
+  @apply
+  max-w-full
+  bg-[#F2FAF9]
+  py-20
+}
+.available{
+  @apply
+  max-w-[88rem]
+  m-auto
+  bg-[url('./images/available.png')]
+  bg-center
+  bg-no-repeat
+  py-[6.8rem]
+  px-28
+}
+.available-head{
+  @apply
+  text-4xl
+  font-bold
+  text-left
+  text-white
+  max-w-md
+}
+.available-body{
+  @apply
+  text-white
+  text-left
+  text-base
+  font-normal
+  max-w-[35rem]
+  my-6
+}
+.avail-butt{
+  @apply
+  w-[14.75rem]
+  min-h-[3.375rem]
+  text-black
+  py-3
+  bg-[#F5B963]
+  rounded
+}
+.escape{
+  @apply
+  max-w-full
+  bg-[url('./images/escape.png')]
+  bg-center
+  bg-cover
+  bg-no-repeat
+  py-[13.12rem]
+  px-[16rem]
+}
+.escape-butt{
+  @apply
+  w-[14.75rem]
+  min-h-[3.375rem]
+  text-black
+  py-3
+  bg-[#D4EEEC]
+  rounded
 }

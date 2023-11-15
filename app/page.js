@@ -1,113 +1,302 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image"
+import Line from './images/line.png'
+import Cabin1 from './images/cabin1.png'
+import Cabin2 from './images/cabin2.png'
+import Cabin3 from './images/cabin3.png'
+import Getaway1 from './images/getaway1.png'
+import Getaway2 from './images/getaway2.png'
+import Getaway3 from './images/getaway3.png'
+import Stars from './images/stars.png'
+import Man from './images/man.png'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
+    <main>
+      <div className="hero">
+        <h1 className="hero-head">
+        Leave the office behind and <span className="text-[#F5B963]">unwind</span>
+        </h1>
+        <p className="hero-body">
+        Welcome to our cozy cabin nestled in the heart of the mountains! Our cabin is the perfect getaway for those seeking peace and relaxation in a natural setting.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+      </div>
+      <div className="inputs">
+        <input className="input-box-long" type="text" placeholder="I want to go"/>
+        <input className="input-box" type="text" placeholder="Check-In"/>
+        <input className="input-box" type="text" placeholder="Check-Out"/>
+        <input className="input-box" type="text" placeholder="Travelers"/>
+        <button className="find-butt"> FIND A PLACE</button>
+      </div>
+      <div className="cabins">
+        <h1 className="head">
+        Discover our idyllic countryside cabins
+        <Image
+        src={Line}
+        alt="line"
+        width={145}
+        className="mt-2"
+        />
+        </h1>
+        <div className="body-grid">
+          <p className="body-text">
+          Fully equipped kitchen and bathroom with plenty of walking and cycling routes to explore.
+          </p>
+          <p className="body-link">
+            View all cabins
+          </p>
+        </div>
+        <div className="card-grid">
+          <div className="card">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            src={Cabin1}
+            alt="cabin"
+            width={339}
             />
-          </a>
+            <div className="card-body">
+            <p className="location">
+            Hampshire · England
+            </p>
+            <h3 className="card-head">
+              <p className="head-content">
+              Rustic country retreat
+              </p>
+              <p className="head-content">
+              £210pp
+              </p>
+            </h3>
+            <p className="card-body-text">
+            Step outside and take in the stunning views. Our cabin sits on a quiet and secluded property, providing the perfect setting for a peaceful retreat.
+            </p>
+            <div className="review-grid">
+              <p className="reviews">
+                4 stars
+              </p>
+              <p className="reviews">
+                82 reviews
+              </p>
+            </div>
+            </div>
+          </div>
+          <div className="card">
+            <Image
+            src={Cabin2}
+            alt="cabin"
+            width={339}
+            />
+            <div className="card-body">
+            <p className="location">
+            Hampshire · England
+            </p>
+            <h3 className="card-head">
+              <p className="head-content">
+              Cozy getaway cabin
+              </p>
+              <p className="head-content">
+              £210pp
+              </p>
+            </h3>
+            <p className="card-body-text">
+            Step outside and take in the stunning views. Our cabin sits on a quiet and secluded property, providing the perfect setting for a peaceful retreat.
+            </p>
+            <div className="review-grid">
+              <p className="reviews">
+                5 stars
+              </p>
+              <p className="reviews">
+                82 reviews
+              </p>
+            </div>
+            </div>
+          </div>
+          <div className="card">
+            <Image
+            src={Cabin3}
+            alt="cabin"
+            width={339}
+            />
+            <div className="card-body">
+            <p className="location">
+            Hampshire · England
+            </p>
+            <h3 className="card-head">
+              <p className="head-content">
+              Rustic country retreat
+              </p>
+              <p className="head-content">
+              £210pp
+              </p>
+            </h3>
+            <p className="card-body-text">
+            Step outside and take in the stunning views. Our cabin sits on a quiet and secluded property, providing the perfect setting for a peaceful retreat.
+            </p>
+            <div className="review-grid">
+              <p className="reviews">
+                4 stars
+              </p>
+              <p className="reviews">
+                82 reviews
+              </p>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="getaway-section">
+      <div className="getaway">
+        <h1 className="head">
+          Inspiration for your next getaway 
+          <Image
+          src={Line}
+          alt="line"
+          width={145}
+          className="mt-2"
+          />
+          </h1>
+          <div className="body-grid">
+            <p className="body-text">
+            We’ve curated some amazing experiences to help you find your next getaway.
+            </p>
+            <p className="body-link">
+              View all experiences
+            </p>
+          </div>
+        </div>
+        <div className="getaway-card-grid">
+            <div className="getaway-card">
+              <Image
+              src={Getaway1}
+              alt="getaway"
+              width={339}
+              height={284}
+              />
+              <div className="card-body">
+                <p className="location">
+                For those who love
+                </p>
+                <h3 className="card-head">
+                  <p className="head-content">
+                  To Explore nature
+                  </p>
+                </h3>
+                <p className="card-body-text">
+                Discover some of the most beautiful scenery – from the wonders of Snowdonia to the famous beauty of the Scottish Highlands.
+                </p>
+              
+              </div>
+            </div>
+            <div className="getaway-card">
+              <Image
+              src={Getaway2}
+              alt="getaway"
+              width={339}
+              height={284}
+              />
+              <div className="card-body">
+                <p className="location">
+                For those who want
+                </p>
+                <h3 className="card-head">
+                  <p className="head-content">
+                  To Relax, rest & re-set
+                  </p>
+                </h3>
+                <p className="card-body-text">
+                Experience mind and body connection through breathing exercises and relaxation with our Yoga inspired get away for you and the family. 
+                </p>
+              
+              </div>
+            </div>
+            <div className="getaway-card">
+              <Image
+              src={Getaway3}
+              alt="getaway"
+              width={339}
+              height={284}
+              />
+              <div className="card-body">
+                <p className="location">
+                For those who have
+                </p>
+                <h3 className="card-head">
+                  <p className="head-content">
+                  Four-legged friends
+                  </p>
+                </h3>
+                <p className="card-body-text">
+                When going on holiday nobody wants to put their dog in a kennel. So, lets keep the family together with our pet friendly cabins.
+                </p>
+              
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="experience">
+        <div className="float-right">
+        <h1 className="experience-head">
+        A truly wonderful experience
+        </h1>
+        <p className="experience-body">
+        Brilliant for anyone looking to get away from the hustle and bustle of city life or detox from their tech for a few days. I could have stayed another week! <br/> <br/> They really have thought about everything here down to the finest details.
+        </p>
+        <div className="star-grid">
+          <Image
+          src={Stars}
+          alt="stars"
+          width={109.5}
+          className="stars"
+          />
+          <p className="date">
+          01 Jan 2023
+          </p>
+        </div>
+        </div>
+      </div>
+      <div className="unwind">
+        <div className="unwind-text">
+        <h1 className="unwind-head">
+        Get ready to unwind
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        src={Line}
+        alt="line"
+        width={120}
+        className="mt-2 mb-9"
+        />
+        </h1>
+        <p className="unwind-body-text">
+        A cabin getaway can be a wonderful way to relax and reconnect with nature. Many cabin rentals are located in beautiful, secluded areas, surrounded by trees and other natural beauty. <br/> <br/>A cabin getaway can be a wonderful way to escape the hustle and bustle of daily life and reconnect with nature.
+          </p>
+        </div>
+        <Image
+        src={Man}
+        width={615}
+        alt=""
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="available-section">
+        <div className="available">
+        <h1 className="available-head">
+        Nourish the mind, body, and spirit.
+        </h1>
+        <p className="available-body">
+        Many people find that the combination of being in a peaceful natural setting and engaging in activities that nourish the mind, body, and spirit leave them feeling rejuvenated and refreshed.
+        </p>
+        <button className="avail-butt">
+          Find Available Cabins
+        </button>
+        </div>
       </div>
-    </main>
+      <div className="escape">
+      <h1 className="available-head">
+        Escape from endless Zoom calls
+        </h1>
+        <p className="available-body">
+        Discover the wonders of spending time offline and away from the office with our 3 day weekend getaway cabin retreats.
+        </p>
+        <button className="escape-butt">
+          Find Available Cabins
+        </button>
+      </div>
+      </main>
   )
 }
