@@ -307,7 +307,7 @@ body {
 }
 .available{
   @apply
-  max-w-[88rem]
+  max-w-[81rem]
   m-auto
   bg-[url('./images/available.png')]
   bg-center
@@ -359,4 +359,136 @@ body {
   py-3
   bg-[#D4EEEC]
   rounded
+}
+/*about page css*/
+
+.about{
+  @apply
+  max-w-full
+  m-auto
+}
+.about-us{
+  @apply
+  max-w-full
+  m-auto
+  py-20
+}
+.about-subhead{
+  @apply
+  font-semibold
+  max-w-[5rem]
+  m-auto
+  text-[#233D2C]
+}
+.about-head{
+  @apply
+  max-w-[49rem]
+  m-auto
+  text-5xl
+  font-semibold
+  mb-6
+  text-center
+}
+.about-body{
+  @apply
+  text-xl
+  leading-6
+  max-w-[48rem]
+  m-auto
+  text-center
+}
+.meet{
+  @apply
+  max-w-full
+  m-auto
+  py-24
+}
+.team-grid{
+  @apply
+  grid
+  grid-cols-3
+  max-w-[64rem]
+  m-auto
+  gap-y-4
+  mt-10
+  justify-items-center
+  place-content-around
+}
+.journey{
+  @apply
+  max-w-full
+  m-auto
+  py-24
+}
+.hire{
+  @apply
+  max-w-full
+  m-auto
+  py-20
+  bg-[#F9FAFB]
+}
+.hire-grid{
+  @apply
+  flex
+  max-w-[19rem]
+  m-auto
+  mt-5
+  place-content-around
+}
+.learn{
+  @apply
+  w-[8rem]
+  h-[3rem]
+  rounded
+  bg-white
+  border-[#344054]
+}
+.started{
+  @apply
+  w-[8rem]
+  h-[3rem]
+  rounded
+  bg-[#233D2C]
+  text-white
+  border-[#344054]
+}
+.read{
+  @apply
+  w-[12rem]
+  h-[3rem]
+  rounded
+  bg-[#D0D5DD]
+  border-slate-600
+}
+.team-butt-grid{
+  @apply
+  flex
+  max-w-[24rem]
+  m-auto
+  mt-5
+  place-content-around
+}
+
+/*cabin css*/
+
+.cabin-grid{
+  @apply
+  grid
+  grid-cols-3
+  max-w-5xl
+  m-auto
+  mb-14
+  gap-20
+}
+
+/*getawaypage*/
+
+.getaway-page-card-grid{
+  @apply
+  grid
+  grid-cols-3
+  max-w-5xl
+  m-auto
+  mb-14
+  gap-20
 }

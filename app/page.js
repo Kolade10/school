@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image"
+import Link from "next/link";
 import Line from './images/line.png'
 import Cabin1 from './images/cabin1.png'
 import Cabin2 from './images/cabin2.png'
@@ -42,9 +43,11 @@ export default function Home() {
           <p className="body-text">
           Fully equipped kitchen and bathroom with plenty of walking and cycling routes to explore.
           </p>
-          <p className="body-link">
-            View all cabins
-          </p>
+          <Link href='/cabin'>
+            <p className="body-link">
+              View all cabins
+            </p>
+          </Link>
         </div>
         <div className="card-grid">
           <div className="card">
@@ -157,9 +160,11 @@ export default function Home() {
             <p className="body-text">
             We’ve curated some amazing experiences to help you find your next getaway.
             </p>
+            <Link href='/getaway'>
             <p className="body-link">
               View all experiences
             </p>
+            </Link>
           </div>
         </div>
         <div className="getaway-card-grid">
